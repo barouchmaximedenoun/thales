@@ -1,0 +1,14 @@
+.title {
+  height: 52px;
+  background-color: gainsboro;
+}
+.weather-info {
+  height: calc(100vh - 124px);
+  background-image: url('https://mocah.org/uploads/posts/124344-miui-8-weather-background-minimal-hd.png');
+  background-size: cover;
+  //background-origin: content-box;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+}
