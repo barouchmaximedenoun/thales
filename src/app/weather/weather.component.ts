@@ -9,6 +9,7 @@ import {Observable} from 'rxjs';
 })
 export class WeatherComponent implements OnInit {
   cities$: Observable<any>;
+  weatherInfo$: Observable<any>;
   selected;
   constructor(private citiesService: WeatherService) {
     this.cities$ = citiesService.getCities();
@@ -18,7 +19,7 @@ export class WeatherComponent implements OnInit {
   }
 
   handleCityClicked(event): void {
-    console.log(event);
-    // this.citiesService.getWeatherInfo($event);
+    console.log(this.selected);
+    this.weatherInfo$ = this.citiesService.getWeatherInfo(this.selected);
   }
 }

@@ -14,6 +14,7 @@ export class WeatherService {
 
   getWeatherInfo(city: string): Observable<any> {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=1890fcd579ac51bb12f42af3ceed6428`
+    console.log(url);
     return this.httpService.get(url);
   }
 
